@@ -1,0 +1,1479 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    font-family: "Kanit", sans-serif;
+}
+
+body {
+    font-family: "Kanit", sans-serif;
+}
+
+h1{
+    font-family: "Kanit", sans-serif;
+}
+
+p {
+    font-family: "Kanit", sans-serif;
+    font-weight: 300;
+    font-size: 16px;
+    line-height: 20px;
+}
+
+a {
+      font-family: "Kanit", sans-serif;
+}
+
+.kanit-thin {
+  font-family: "Kanit", sans-serif;
+  font-weight: 100;
+  font-style: normal;
+}
+  
+.kanit-extralight {
+  font-family: "Kanit", sans-serif;
+  font-weight: 200;
+  font-style: normal;
+}
+  
+.kanit-light {
+  font-family: "Kanit", sans-serif;
+  font-weight: 300;
+  font-style: normal;
+}
+  
+.kanit-regular {
+  font-family: "Kanit", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+}
+  
+.kanit-medium {
+  font-family: "Kanit", sans-serif;
+  font-weight: 500;
+  font-style: normal;
+}
+  
+.kanit-semibold {
+  font-family: "Kanit", sans-serif;
+  font-weight: 600;
+  font-style: normal;
+}
+  
+.kanit-bold {
+  font-family: "Kanit", sans-serif;
+  font-weight: 700;
+  font-style: normal;
+}
+  
+.kanit-extrabold {
+  font-family: "Kanit", sans-serif;
+  font-weight: 800;
+  font-style: normal;
+}
+  
+.kanit-black {
+  font-family: "Kanit", sans-serif;
+  font-weight: 900;
+  font-style: normal;
+}
+  
+.kanit-thin-italic {
+  font-family: "Kanit", sans-serif;
+  font-weight: 100;
+  font-style: italic;
+}
+  
+.kanit-extralight-italic {
+  font-family: "Kanit", sans-serif;
+  font-weight: 200;
+  font-style: italic;
+}
+  
+.kanit-light-italic {
+  font-family: "Kanit", sans-serif;
+  font-weight: 300;
+  font-style: italic;
+}
+  
+.kanit-regular-italic {
+  font-family: "Kanit", sans-serif;
+  font-weight: 400;
+  font-style: italic;
+}
+  
+.kanit-medium-italic {
+  font-family: "Kanit", sans-serif;
+  font-weight: 500;
+  font-style: italic;
+}
+  
+.kanit-semibold-italic {
+  font-family: "Kanit", sans-serif;
+  font-weight: 600;
+  font-style: italic;
+}
+  
+.kanit-bold-italic {
+  font-family: "Kanit", sans-serif;
+  font-weight: 700;
+  font-style: italic;
+}
+  
+.kanit-extrabold-italic {
+  font-family: "Kanit", sans-serif;
+  font-weight: 800;
+  font-style: italic;
+}
+  
+.kanit-black-italic {
+  font-family: "Kanit", sans-serif;
+  font-weight: 900;
+  font-style: italic;
+}
+
+.container {
+    background: #ffffff;
+    display: flex;
+}
+
+
+
+
+/*partie gauche noir et fixe*/
+aside {
+  height: 100vh;
+  position: sticky;
+  top: 0;
+  min-width: 300px;
+  width: 25%;
+  background: black;
+}
+.imagefixe {
+  width: 100%;
+  margin: 0 auto;
+}
+.blocinfos{
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  margin: 0 auto;
+  padding: 0px 40px 0px 40px;
+}
+.nom {
+  font-size:62px;
+  font-weight: lighter;
+  text-align: left;
+  color: #ffffff;
+  padding: 0px 0px 20px 0px;
+}
+.textepresentation {
+  text-align: justify;
+  font-weight:300;
+  font-size: 16px;
+  line-height: 20px;
+  height: auto;
+  color: #ffffff;
+}
+.textecontact {
+  text-align: left;
+  font-weight:300;
+  font-size: 20px;
+  height: auto;
+  color: #ffffff;
+  padding: 20px 0px 0px 0px;
+  text-decoration: none;
+}
+.flecheverte {
+    width: 20px;
+}
+
+
+
+
+
+
+/* Section NAVBAR */
+nav {
+  width: 100%;
+  height: 60px;
+  background: #CDDC29;
+  top: 0;
+  position: sticky;
+  flex-direction: column;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.7); /* Ombre portée */
+}
+.navbar ul {
+  list-style: none;
+  display: flex;
+  justify-content: space-around;
+  padding: 10px;
+}
+.navbar ul li a {
+  text-align: center;
+  font-weight: 300;
+  font-size: 18px;
+  color: #ffffff;
+  text-decoration: none;
+  display: block;
+  padding: 10px;
+}
+.navbar ul li a:hover {
+  font-weight: 300;
+  color: #ffffff;
+  background-color:#000000;
+  font-size: 18px;
+  border-radius: 5px;
+  cursor: pointer;
+  padding: 10px;
+}
+
+
+
+
+
+
+
+main {
+  flex: 1;
+  background: #ffffff;
+}
+
+
+
+/* Section image de fond et titre métiers */
+.sectioncontenuimage {
+  display: flex;
+  align-items: center;
+  height: 100vh;
+}
+.imagefonddiv {
+  width: 100%;
+  height: 100%;
+  background-image: url("../images/imagefond2.jpg");
+  background-size: cover; /* Pour que l'image couvre tout le div */
+  background-position: center; /* Pour centrer l'image */
+  background-repeat: no-repeat; /* Pour éviter la répétition de l'image */
+}
+/* style 4 métiers bloc central */
+.blocprofessions{
+  width: 100%;
+  height: 100%;
+  /* display: flex; */
+  /* flex-direction: column; */
+  /* justify-content: center; */
+  /* align-content: center; */
+  /* margin: 0 auto; */
+  padding: 100px 0px 0px 60px;
+}
+.professions {
+  /* width: 100vh; */
+  font-family: "Kanit", sans-serif;
+  font-size:80px;
+  line-height: 100px;
+  font-weight: 200;
+  text-align: left;
+  color: #000000;
+  padding: 0px 0px 20px 0px;
+  text-shadow: 2px 2px 5px rgba(205, 220, 41, 2);
+}
+.flecheverteprofessions {
+  width: 50px;
+}
+
+
+
+/* section fond vert */
+.sectioncontenufondvert {
+  background-color: #CDDC29;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  display: flex;
+  justify-content: center;
+}
+.infosfondvert {
+    width: 70%;
+    display: flex;
+    align-items: left;
+    justify-content: left;
+    flex-direction: column;
+}
+.bloctitregraphiste {
+    width: 100%;
+    font-size:70px;
+    line-height: 80px;
+    font-weight: 200;
+    text-align: left;
+    color: #000000;
+    padding: 30px 30px 20px 0px;
+    flex-direction: column;
+}
+.bloctextegraphiste {
+  width: 100%;
+  font-size:22px;
+  line-height: 30px;
+  font-weight: 200;
+  text-align: justify;
+  flex-direction: column;
+  color: #000000;
+  padding: 0px 0px 20px 0px;
+}
+.blocimagegraphiste{
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0px 0px 40px 0px;
+} 
+.blocimages{
+  width: 100%;
+  height: 350px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  gap: 40px;
+  margin: 0 auto;
+}
+.imagegraphiste{
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  padding: 0px 10px 0px 10px;
+}
+
+
+/* section fond blanc */
+.sectioncontenufondblanc {
+  background-color: #ffffff;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  display: flex;
+  justify-content: center;
+}
+.infosfondblanc {
+  width: 70%;
+  display: flex;
+  align-items: left;
+  justify-content: left;
+  flex-direction: column;
+}
+.bloctitrewebdev {
+  width: 100%;
+  font-size:70px;
+  line-height: 80px;
+  font-weight: 200;
+  text-align: left;
+  color: #000000;
+  padding: 40px 0px 20px 0px;
+}
+.bloctextewebdev {
+  width: 100%;
+  font-size:22px;
+  line-height: 30px;
+  font-weight: 200;
+  text-align: justify;
+  color: #000000;
+  padding: 0px 0px 30px 0px;
+}
+
+
+
+
+
+
+/* style page creations */   
+.bloccreations{
+  /* width: 100%; */
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin: 0 auto;
+  padding: 30px 0px 0px 0px;
+}
+.bloccreations2{
+  /* width: 100vh; */
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin: 0 auto;
+}
+.titrecreations {
+  /* width: 100vh; */
+  font-family: "Kanit", sans-serif;
+  font-size:70px;
+  line-height: 80px;
+  font-weight: 200;
+  text-align: center;
+  color: #000000;
+  text-shadow: 2px 2px 5px rgba(205, 220, 41, 2);
+  padding: 30px 0px 40px 0px;
+}
+/* style photo thematique central */
+.containercreations {
+  display: flex;
+  margin: 0 auto;
+  gap: 40px;
+  padding: 0px 0px 40px 0px;
+  width: 100%;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.card {
+  background-color: white;
+  border: 1px solid #bbbbbb;
+  border-radius: 8px;
+  box-shadow: 1px 1px 3px rgba(205, 220, 41, 2);
+  /* padding: 20px; */
+  gap: 20px;
+  width: 50%;
+  height: 100%;
+  flex-direction: column;
+
+}
+.containerimage {
+  width: 100%;
+  height: 330px;
+}
+.image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position:top;
+  padding: 10px;
+}
+.travaux {
+  width: 100%;
+  color: #000000;
+  font-weight: 300;
+  font-size: 40px;
+  line-height: 30px;
+  text-align: center;
+  padding: 20px 0px 10px 0px;
+}
+.description {
+  width: 100%;
+  font-size: 1em;
+  line-height: 20px;
+  color:#000000;
+  text-align: justify;
+  padding: 10px 10px 0px 10px;
+}
+.form {
+  width: 150px;
+  height: 35px;
+  margin: 0 auto;
+}
+.boutton {
+  font-family: "Kanit", sans-serif;
+  width: 120px;
+  background-color: white;
+  color:  #000000;
+  border: 1px solid  #CDDC29;
+  /* padding: 10px 20px; */
+  font-size: 1em;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s, color 0.3s, border-color 0.3s;
+}
+.boutton:hover {
+  font-size: 1em;
+  background-color: #000000;
+  border-color: #000000;
+  color:  #ffffff;
+}
+
+
+
+
+
+
+
+
+
+/* style page emailing */
+.containertxtemailing{
+  width: 700px;
+  padding: 40px 0px 0px 0px;
+}
+.blocimageemailing{
+  max-width: 900px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+} 
+.imageemailing{
+  width: 100%;
+  /* height: 500px; */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0px 20px 0px 20px;
+  object-fit: cover;
+}
+.soustitreemailing {
+  font-size:20px;
+  line-height: 30px;
+  font-weight: 600;
+  color:#000000;
+  text-align: justify;
+  padding: 20px 0px 0px 0px;
+}
+.descriptionemailing {
+  font-size:20px;
+  line-height: 30px;
+  font-weight: 200;
+  color:#000000;
+  text-align: justify;
+  padding: 0px 0px 0px 0px;
+}
+
+
+
+/* style page realisation PHP */
+.containerrealisations {
+  width: 60%;
+  display: flex;
+  margin: 0 auto;
+  justify-content: center;
+  align-items: center;
+}
+.titrerealisation {
+  width: 100%;
+  font-family: "Kanit", sans-serif;
+  font-size:50px;
+  line-height: 60px;
+  font-weight: 200;
+  text-align: center;
+  color: #000000;
+  padding: 20px 0px 20px 0px;
+  text-shadow: 2px 2px 5px rgba(205, 220, 41, 2);
+}
+.descriptionrealisation {
+  width: 100%;
+  font-size:16px;
+  line-height: 24px;
+  font-weight: 200;
+  color:#000000;
+  text-align: justify;
+  margin: 20px 0px 20px 0px;
+}
+.blocimagerealisation{
+  max-width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+} 
+.imagerealisation{
+  width: 100%;
+  /* height: 500px; */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0px 20px 0px 20px;
+  object-fit: cover;
+}
+.imagelisterealisation {
+  width: 400px;
+  height: 330px;
+}
+
+
+
+
+
+/* style page parcours professionnel */   
+.containertxtparcours{
+  width: 100%;
+}
+.blocparcours{
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin: 0 auto;
+  padding: 30px 0px 0px 0px;
+}
+.sectioncouleurblanc{
+  width: 70%;
+  height: 100%;
+  background-color: #ffffff;
+  padding: 20px 20px 20px 20px;
+  margin: 0 auto;
+}
+.sectioncouleurvert{
+  width: 70%;
+  height: 100%;
+  background-color: #edf1cc;
+  padding: 20px 20px 20px 20px;
+  border-radius: 40px 0px 40px 0px;
+  margin: 0 auto;
+}
+.titreparcours {
+  font-family: "Kanit", sans-serif;
+  font-size:70px;
+  line-height: 80px;
+  font-weight: 200;
+  text-align: center;
+  color: #000000;
+  text-shadow: 2px 2px 5px rgba(205, 220, 41, 2);
+  padding: 0px 0px 40px 0px;
+}
+.entreprise {
+  font-size:24px;
+  line-height: 24px;
+  font-weight: 600;
+  color:#000000;
+  text-align: center;
+}
+.annee {
+  font-size:20px;
+  line-height: 30px;
+  font-weight: 600;
+  color: #0a5412;
+  text-align: center;
+}
+.profession {
+  font-size:48px;
+  line-height: 50px;
+  font-weight: 200;
+  color:#000000;
+  text-align: center;
+}
+.postes {
+  font-size:18px;
+  line-height: 24px;
+  font-weight: bold;
+  color:#000000;
+  text-align: center;
+  padding: 10px 0px 0px 0px;
+}
+.mission {
+  font-size:18px;
+  line-height: 24px;
+  font-weight: 200;
+  color:#000000;
+  text-align: center;
+}
+
+
+/* style page GESTION DE MON SITE */ 
+.blocgestion{
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin: 0 auto;
+  padding: 80px 0px 0px 0px;
+}
+.boutonadmingestion {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 300px;
+  height: 35px;
+  padding: 40px;
+}          
+.boutonadmingestion-envoyer {
+  display: inline-block;
+  width:300px;
+  height: 35px;
+  text-align: center;
+  line-height: 30px;
+  font-size: 20px;
+  color: rgb(255, 0, 0);
+  text-decoration: none;
+  border: 1px solid #999;
+  border-radius: 5px;
+  background-color: white;
+}
+
+
+
+
+/* style page formulaire CONTACT */   
+.bloccontact{
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  align-content: center;
+  margin: 0 auto;
+  padding: 0px 0px 0px 0px;
+}
+.contact {
+  width: 100%;
+  font-size:70px;
+  line-height: 80px;
+  font-weight: 200;
+  text-align: center;
+  color: #000000;
+  padding: 40px 0px 20px 0px;
+  text-shadow: 2px 2px 5px rgba(205, 220, 41, 2);
+}
+.flechevertecontact {
+  width: 50px;
+}
+.formulaire{
+width: 500px;
+box-sizing: border-box;
+border: 1px solid #999;
+}
+.dateheure {
+  width: 500px;
+  font-weight: 500;
+  color:#000000;
+  text-align: center;
+  padding: 0px 0px 0px 0px;
+}
+form {
+  width: 100%;
+  height: 100%;
+  /* Le contour du formulaire */
+  padding: 20px 0px 50px 0px;
+  border-radius: 1em;
+  text-align: center;
+}
+form li + li {
+margin-top: 20px;
+}
+label {
+/* Taille et alignement uniformes */
+display: inline-block;
+width: 150px;
+text-align: left;
+}
+textarea {
+/* On aligne les textes sur plusieurs lignes avec leur libellé. */
+vertical-align: top;
+/* On fournit un peut d'espace pour saisir du texte. */
+height: 5em;
+/* On permet de redimensionner verticalement. */
+resize: vertical;
+}            
+.bouton {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 30px;
+  padding: 40px;
+}          
+.bouton-envoyer {
+  display: inline-block;
+  width: 150px;
+  height: 35px;
+  text-align: center;
+  line-height: 30px;
+  font-size: 16px;
+  color: black;
+  text-decoration: none;
+  border: 1px solid #999;
+  border-radius: 5px;
+  background-color: white;
+}
+.bouton-envoyer:hover, .bouton-envoyer:active {
+  background-color: black;
+  color: white;
+}
+
+.boutonadmin {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 40px;
+  padding: 40px;
+}          
+.boutonadmin-envoyer {
+  display: inline-block;
+  width:60px;
+  height: 30px;
+  text-align: center;
+  line-height: 30px;
+  font-size: 15px;
+  color: rgb(255, 0, 0);
+  text-decoration: none;
+  border: 1px solid #999;
+  border-radius: 5px;
+  background-color: white;
+}
+
+/* style liste contact */   
+.bloclistecontact{
+  width: 600px;
+  height: 100%;
+  margin: 0 auto;
+}
+.nomducontact {
+  font-size:30px;
+  line-height: 34px;
+  font-weight: 500;
+  color:#000000;
+  text-align: center;
+  padding: 10px 0px 0px 0px;
+}
+.societeducontact{
+  font-size:26px;
+  line-height: 30px;
+  font-weight: 400;
+  color:#000000;
+  text-align: center;
+  padding: 10px 0px 20px 0px;
+}
+.telducontact{
+  font-size:22px;
+  line-height: 30px;
+  font-weight:300;
+  color:#000000;
+  text-align: center;
+  padding: 0px 0px 0px 0px;
+}
+.messageducontact {
+  font-size:22px;
+  line-height: 30px;
+  font-weight: 400;
+  color:#ff0000;
+  text-align: center;
+  padding: 20px 0px 10px 0px;
+}
+
+/* style page ajouter réalisation */   
+.blocajouterrealisation{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  align-content: center;
+  margin: 0 auto;
+  padding: 0px 0px 0px 0px;
+}
+
+
+
+/* style footer */
+.sectionfooterfondvert {
+  background-color: #CDDC29;
+  width: 100%;
+  height: 80px;
+  display: flex;
+  align-items: center;
+  display: flex;
+  justify-content: center;
+  }
+.stylefooter{
+  width: 100%;
+  height: 80px;
+  background-color: #CDDC29;
+}
+.coordonnees {
+  color: #000000;
+  text-decoration: none;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.mentions {
+    display: inline-block;
+    text-align: center;
+    color: #000000;
+    font-family: "Kanit", sans-serif;
+    font-weight: 200;
+    font-size: 14px;
+    line-height: 14px;
+}
+
+/* style barre de navigation footer */
+.navbarfooter {
+    width: 100%;
+    height: 30px;
+    margin: 0 auto;
+    padding: 0px 0px 50px 0px;
+}
+.navbarfooter ul {
+    display: flex;
+    text-align: center;
+    justify-content: center;
+    margin: 0 auto;
+    padding: 20px 0px 0px 0px;
+    font-family: "Kanit", sans-serif;
+    font-weight: 300;
+    font-size: 14px;
+}
+.navbarfooter ul li a {
+    font-family: "Kanit", sans-serif;
+    font-weight: 300;
+    text-align: center;
+    font-size: 14px;
+    color: #000000;
+    text-decoration: none;
+    margin: 20px;
+    width: 200px;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* @media (max-width: 800px) */
+
+@media only screen and (max-width: 800px){
+.container {
+  width: 100%;
+  flex-direction: column;
+}
+
+/*partie gauche noir et fixe*/
+aside {
+  position: static;
+  width: 100%;
+  height: 100%;
+  padding: 0px 0px 40px 0px
+}
+.imagefixe {
+  width: 90%;
+  margin: 0 auto;
+}
+.blocinfos{
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  margin: 0 auto;
+  padding : 0px 30px 0px 30px;
+}
+.nom {
+  font-size:50px;
+  text-align: center;
+  font-weight: 400;
+  color: #ffffff;
+  padding: 0px 0px 20px 0px;
+}
+.textepresentation {
+  text-align: center;
+  font-weight: 200;
+  font-size: 20px;
+  line-height: 22px;
+  height: auto;
+  color: #ffffff;
+}
+.textecontact {
+  text-align: center;
+  font-weight:300;
+  font-size: 25px;
+  height: auto;
+  color: #ffffff;
+  padding: 20px 0px 0px 0px;
+  text-decoration: none;
+}
+.flecheverte {
+    width: 20px;
+}
+
+/* Section NAVBAR */
+nav {
+  background: #ffffff;
+  height: 230px;
+}
+.navbar ul {
+  width: 300px;
+  list-style: none;
+  flex-direction: column;
+  margin: 0 auto;
+  padding: 10px;
+}
+.navbar ul li a {
+  text-align: center;
+  font-weight: 300;
+  font-size: 40px;
+  line-height: 30px;
+  color: #000000;
+  text-decoration: none;
+  display: block;
+  padding: 10px;
+}
+.navbar ul li a:hover {
+  font-weight: 300;
+  font-size: 40px;
+  line-height: 30px;
+  color: #ffffff;
+  background-color:#CDDC29;
+  border-radius: 5px;
+  cursor: pointer;
+  padding: 10px;
+}
+
+
+
+/* Section image de fond et titre métiers DISPARAIT*/
+.sectioncontenuimage {
+  display: none;
+  /* display: flex;
+  align-items: center; */
+}
+.imagefonddiv {
+  display: none;
+  width: 100%;
+  height: 100%;
+  background-image: url("../images/2147.jpg");
+  background-size: cover; /* Pour que l'image couvre tout le div */
+  background-position: center; /* Pour centrer l'image */
+  background-repeat: no-repeat; /* Pour éviter la répétition de l'image */
+}
+/* style 4 métiers bloc central */
+.blocprofessions{
+  display: none;
+  /* height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  margin: 0 auto;
+  padding: 0px 0px 0px 60px; */
+}
+.professions {
+  display: none;
+  /* width: 100vh;
+  font-family: "Kanit", sans-serif;
+  font-size:70px;
+  line-height: 80px;
+  font-weight: 200;
+  text-align: left;
+  color: #000000;
+  padding: 0px 0px 20px 0px;
+  text-shadow: 2px 2px 5px rgba(205, 220, 41, 2); */
+}
+.flecheverteprofessions {
+  display: none;
+  width: 50px;
+}
+
+
+
+
+
+
+
+
+
+/* section fond vert accueil */
+.sectioncontenufondvert {
+  width: 100%;
+  height: 100%;
+  background-color: #CDDC29;
+  justify-content: center;
+}
+.blocfondvert{
+  display: none;
+}
+.imagefondvert {
+  display: none;
+}
+.infosfondvert {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.bloctitregraphiste {
+  font-size: 44px;
+  line-height: 50px;
+  font-weight: 500;
+  text-align: center;
+  color: #000000;
+  padding: 30px 20px 0px 20px;
+}
+.bloctextegraphiste {
+  font-size:18px;
+  line-height: 22px;
+  font-weight: 200;
+  text-align: justify;
+  color: #000000;
+  padding: 20px 20px 30px 20px;
+}
+.blocimagegraphiste{
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0px 0px 40px 0px;
+  flex-direction: column;
+} 
+.imagegraphiste {
+  width: 100%;
+  height: 370px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  padding: 10px 20px 20px 20px;
+  object-fit: cover;
+}
+
+
+/* section fond blanc accueil*/
+.sectioncontenufondblanc {
+  background-color: #ffffff;
+  width: 100%;
+  height: 100%;
+  justify-content: center;
+
+}
+.blocfondblanc{
+  display: none;
+}
+.imagefondblanc {
+  display: none;
+}
+.infosfondblanc {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.bloctitrewebdev {
+  font-size: 44px;
+  line-height: 50px;
+  font-weight: 500;
+  text-align: center;
+  color: #000000;
+  padding: 20px 0px 0px 0px;
+}
+.bloctextewebdev {
+  font-size:18px;
+  line-height: 22px;
+  font-weight: 200;
+  text-align: justify;
+  color: #000000;
+  padding: 20px 20px 30px 20px;
+}
+
+
+/* style page creations */   
+.bloccreations{
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  /* justify-content: center; */
+  align-items: center;
+  margin: 0 auto;
+  padding: 30px 0px 0px 0px;
+}
+.bloccreations2{
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin: 0 auto;
+}
+.titrecreations {
+  width: 100%;
+  font-family: "Kanit", sans-serif;
+  font-size:50px;
+  line-height: 50px;
+  font-weight: 200;
+  text-align: center;
+  color: #000000;
+  text-shadow: 2px 2px 5px rgba(205, 220, 41, 2);
+  padding: 30px 0px 40px 0px;
+}
+.containercreations {
+  width: 100%;
+  display: flex;
+  margin: 0 auto;
+  gap: 40px;
+  padding: 0px 0px 40px 0px;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.card {
+  background-color: white;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  /* padding: 20px; */
+  /* gap: 20px; */
+  width: 350px;
+  height: 100%;
+}
+.containerimage {
+  width: 350px;
+  height: 330px;
+}
+.image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position:top;
+  padding: 10px;
+}
+.travaux {
+  color: #000000;
+  font-weight: 300;
+  font-size: 40px;
+  line-height: 30px;
+  text-align: center;
+  padding: 20px 0px 10px 0px;
+}
+.description {
+  font-size: 1em;
+  line-height: 20px;
+  color:#000000;
+  text-align: justify;
+  padding: 10px 10px 0px 10px;
+}
+.flechevertecontact {
+  width: 40px;
+  display: none;
+}
+
+
+
+/* style page parcours professionnel */   
+.blocparcours{
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin: 0 auto;
+  padding: 30px 0px 0px 0px;
+}
+.sectioncouleurblanc{
+  width: 90%;
+  height: 100%;
+  background-color: #ffffff;
+  padding: 20px 0px 20px 0px;
+  /* margin: 0 auto; */
+}
+.sectioncouleurvert{
+  width: 90%;
+  height: 100%;
+  background-color: #edf1cc;
+  padding: 20px 0px 20px 0px;
+  /* margin: 0 auto; */
+}
+.containertxtparcours{
+  width: 100%;
+  padding: 0px 0px 0px 0px;
+}
+.titreparcours {
+  width: 100%;
+  font-family: "Kanit", sans-serif;
+  font-size:60px;
+  line-height: 70px;
+  font-weight: 200;
+  text-align: center;
+  color: #000000;
+  text-shadow: 2px 2px 5px rgba(205, 220, 41, 2);
+  padding: 0px 0px 40px 0px;
+}
+.entreprise {
+  width: 100%;
+  font-size:28px;
+  line-height: 30px;
+  font-weight: 600;
+  color:#000000;
+  text-align: center;
+  padding: 0px 0px 0px 0px;
+}
+.annee {
+  width: 100%;
+  font-size:20px;
+  line-height: 36px;
+  font-weight: 600;
+  color: #0a5412;
+  text-align: center;
+}
+.profession {
+  width: 100%;
+  font-size:48px;
+  line-height: 50px;
+  font-weight: 200;
+  color:#000000;
+  text-align: center;
+  padding: 0px 0px 0px 0px;
+}
+.postes {
+  width: 100%;
+  font-size:18px;
+  line-height: 24px;
+  font-weight: bold;
+  color:#000000;
+  text-align: center;
+  padding: 10px 0px 0px 0px;
+}
+.mission {
+  width: 100%;
+  font-size:18px;
+  line-height: 24px;
+  font-weight: 200;
+  color:#000000;
+  text-align: center;
+  padding: 0px 20px 0px 20px;
+}
+
+
+
+
+/* style page formulaire */   
+.bloccontact{
+  height: 600px;
+  /* display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  align-content: center; */
+  margin: 0 auto;
+}
+.contact {
+  /* width: 100%; */
+  font-size:70px;
+  line-height: 70px;
+  font-weight: 200;
+  text-align: center;
+  color: #000000;
+  text-shadow: 2px 2px 5px rgba(205, 220, 41, 2);
+}
+.formulaire{
+  width: 100%;
+  box-sizing: border-box;
+  border: 1px solid #999;
+}
+.dateheure {
+  width: 100%;
+  font-weight: 500;
+  color:#000000;
+  text-align: center;
+  padding: 0px 0px 0px 0px;
+}
+form {
+  width: 400px;
+  /* height: 100%; */
+  /* Le contour du formulaire */
+  padding: 20px 0px 20px 0px;
+  border-radius: 1em;
+  text-align: center;
+}
+form li + li {
+margin-top: 40px;
+}
+label {
+/* Taille et alignement uniformes */
+display: inline-block;
+/* width: 100%; */
+text-align: center;
+}
+textarea {
+/* On aligne les textes sur plusieurs lignes avec leur libellé. */
+vertical-align: top;
+/* On fournit un peut d'espace pour saisir du texte. */
+height: 7em;
+/* On permet de redimensionner verticalement. */
+resize: vertical;
+}            
+.bouton {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 30px;
+  padding: 40px;
+}          
+.bouton-envoyer {
+  display: inline-block;
+  width: 150px;
+  height: 35px;
+  text-align: center;
+  line-height: 30px;
+  font-size: 16px;
+  color: black;
+  text-decoration: none;
+  border: 1px solid #999;
+  border-radius: 5px;
+  background-color: white;
+}
+.bouton-envoyer:hover, .bouton-envoyer:active {
+  background-color: black;
+  color: white;
+}
+
+
+
+
+
+
+/* style footer */
+.sectionfooterfondvert {
+  background-color: #CDDC29;
+  width: 100%;
+  height: 100px;
+  display: flex;
+  align-items: center;
+  display: flex;
+  justify-content: center;
+  }
+.stylefooter{
+  width: 100%;
+  height: 80px;
+  background-color: #CDDC29;
+}
+.coordonnees {
+  color: #000000;
+  text-decoration: none;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.mentions {
+    display: inline-block;
+    text-align: center;
+    color: #000000;
+    font-family: "Kanit", sans-serif;
+    font-weight: 400;
+    font-size: 12px;
+    line-height: 18px;
+}
+
+/* style barre de navigation footer */
+.navbarfooter {
+    width: 100%;
+    height: 30px;
+    margin: 0 auto;
+    /* padding: 20px 0px 0px 0px; */
+}
+.navbarfooter ul {
+    display: flex;
+    text-align: center;
+    justify-content: center;
+    margin: 0 auto;
+    font-family: "Kanit", sans-serif;
+    font-weight: 300;
+    font-size: 12px;
+}
+.navbarfooter ul li a {
+    font-family: "Kanit", sans-serif;
+    font-weight: 300;
+    text-align: center;
+    font-size: 12px;
+    color: #000000;
+    text-decoration: none;
+    /* margin: 10px; */
+    width: 200px;
+}
+
+}
