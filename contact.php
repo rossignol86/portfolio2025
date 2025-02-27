@@ -39,21 +39,24 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 // Fermer la connexion
 ?>
 
+
 <!DOCTYPE html>
 <html lang="fr">
   <head>
-  <meta charset="UTF-8" />
+    <meta charset="UTF-8" />
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Kanit:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Righteous&display=swap" rel="stylesheet">  
     
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Portfolio Franck Rossignol 2025</title>
-      
+    
     <link rel="stylesheet" href="styles/reset.css">
     <link rel="stylesheet" href="styles/styles.css">
-    <link rel="stylesheet" href="styles/contact.css">    
+    <link rel="stylesheet" href="styles/contact.css">
+
     <link rel="icon" href="favicon.ico">
+      
   </head>
     
   <body>
@@ -98,7 +101,6 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
                         </a>
                     </p>
                 </div>
-            </div>
       </aside>
         
         
@@ -116,63 +118,80 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
                 </ul>
         </nav>
           
-
+                  
+<!-- partie centrale-->        
         <div>
-            <!-- partie centrale mobile -->        
-            <section class="bloccontact">
-                <div>
-                    <h1 class="contact">
-                        <img class="flechevertecontact" src="images/flecheverte1.png" alt="fleche verte">
-                        Contact
-                    </h1>
-                    <span class="dateheure">
-                        <?php
-                            // Un script PHP simple qui affiche la date et l'heure actuelles
-                            echo "<p>Nous sommes le " . date("d/m/Y") . " et il est " . date("H:i:s") . "</p>";
-                        ?>
-                    </span>
-                </div>
-                <div>
-                    <!-- Formulaire de renseignement -->
-                    <form action="contact.php" method="post">
-                        <label for="nom">Nom :</label>
-                        <input class="formulaire" type="text" id="nom" name="nom" required><br><br>
-                        
-                        <label for="societe">Société :</label>
-                        <input class="formulaire" type="text" id="societe" name="societe"><br><br>
-                        
-                        <label for="telephone">Téléphone :</label>
-                        <input class="formulaire" type="tel" id="telephone" name="telephone"><br><br>
-                        
-                        <label for="email">Email :</label>
-                        <input class="formulaire" type="email" id="email" name="email" required><br><br>
-                        
-                        <label for="message">Message :</label>
-                        <textarea  class="formulaire" id="message" name="message" required></textarea><br><br>
-                        
-                        <input class="boutton" type="submit" value="Envoyer">
-                    </form>  
-                </div>
-            </section> 
 
-                    
-            <!-- section footer fond vert -->
+<!-- TITRE PAGE MES CREATIONS -->           
+            <container class="bloccreations">
+                <div>
+                    <h1 class="titrecreations">
+                        <img class="flechevertecreations" src="images/flecheverte1.png" alt="fleche verte">
+                        Contactez-moi !
+                    </h1>
+                </div>
+      
+            </container>
+            <container class="bloccreations2">
+                <div class="containercreations">
+                    <div class="card">  
+                        <div class="containerimage">
+                            <img class="image" src="images/email.jpg" alt="Publicité facebook" >
+                        </div>
+                        <!-- <div>
+                            <p class="travaux">Vous pouvez me laisser un message</p>
+                        </div> -->
+                        <div>
+                            <p class="description">N'hésitez pas à me contacter pour toute question ou demande. Je suis à votre disposition pour vous aider
+                            et répondre à vos besoins. Je serai ravis de discuter de votre projet et de voir comment nous pouvons collaborer.
+                            Contactezmoi dès aujourd'hui et faisons avancer vos idées ensemble !</p>
+                        </div>
+
+                        <section>
+                            <!-- Formulaire de renseignement -->
+                            <form action="contact.php" method="post">
+                                <label for="nom">Nom :</label>
+                                <input class="formulaire" type="text" id="nom" name="nom" required><br><br>
+                                
+                                <label for="societe">Société :</label>
+                                <input class="formulaire" type="text" id="societe" name="societe"><br><br>
+                                
+                                <label for="telephone">Téléphone :</label>
+                                <input class="formulaire" type="tel" id="telephone" name="telephone"><br><br>
+                                
+                                <label for="email">Email :</label>
+                                <input class="formulaire" type="email" id="email" name="email" required><br><br>
+                                
+                                <label for="message">Message :</label>
+                                <textarea  class="formulaire" id="message" name="message" required></textarea><br><br>
+                                
+                                <input class="boutton1" type="submit" value="Envoyer">
+                            </form>
+                        </section>
+                    </div>
+
+            </container>           
+              
+<!-- section footer fond vert -->
             <section class="sectionfooterfondvert">
-                <footer class="stylefooter">
-                    <div class="navbarfooter">
-                        <ul>
-                            <li><a href="index.html">Accueil</a></li>
-                            <li><a href="creations.html">Mes créations</a></li>
-                            <li><a href="parcours.html">Mon parcours</a></li>
-                            <li><a href="contact.php">Contact</a></li>
-                        </ul>
-                    </div>
-                    
-                    <div class="coordonnees">
-                        <p class="mentions">ff.rossignol@yahoo.fr - 86190 VOUILLE - ©rossignol - 2024 -&nbsp;Webdesign&nbsp;sur&nbsp;FIGMA - HTML & CSS sur Visual Studio Code</p>
-                    </div>
-                </footer>
-            </section>  
+                    <footer class="stylefooter">
+                        <div class="navbarfooter">
+                            <ul>
+                                <li><a href="index.html">Accueil</a></li>
+                                <li><a href="creations.html">Mes créations</a></li>
+                                <li><a href="parcours.html">Mon parcours</a></li>
+                                <li><a href="contact.php">Contact</a></li>
+                            </ul>
+                        </div>
+                        
+                        <div class="coordonnees">
+                            <p class="mentions">ff.rossignol@yahoo.fr - 86190 VOUILLE - ©rossignol - 2024 -&nbsp;Webdesign&nbsp;sur&nbsp;FIGMA - HTML & CSS sur Visual Studio Code</p>
+                        </div>
+                    </footer>
+
+            </section>
+
+<!-- fin de la partie centrale-->             
         </div>
                  
       </main>

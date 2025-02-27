@@ -179,7 +179,7 @@ main {
 
 /* section fond vert */
 .sectioncontenufondvert {
-  background-color: #ffffff;
+  background-color: #e9f3d0;
   border-top: 30px solid #CDDC29;;
   width: 100%;
   height: 100%;
@@ -310,7 +310,10 @@ main {
   text-align: center;
   color: #000000;
   text-shadow: 2px 2px 5px rgba(205, 220, 41, 2);
-  padding: 30px 0px 40px 0px;
+  padding: 30px 0px 80px 0px;
+}
+.flechevertecreations {
+  width: 50px;
 }
 
 
@@ -363,14 +366,15 @@ main {
   line-height: 20px;
   color:#000000;
   text-align: justify;
-  padding: 10px 10px 0px 10px;
+  padding: 10px 10px 20px 10px;
 }
 .form {
   width: 150px;
   height: 35px;
   margin: 0 auto;
+  padding: 10px 0px 50px 0px;
 }
-.boutton {
+.boutonplus {
   font-family: "Kanit", sans-serif;
   width: 120px;
   background-color: white;
@@ -382,7 +386,7 @@ main {
   cursor: pointer;
   transition: background-color 0.3s, color 0.3s, border-color 0.3s;
 }
-.boutton:hover {
+.boutonplus:hover {
   font-size: 1em;
   background-color: #000000;
   border-color: #000000;
@@ -408,7 +412,9 @@ main {
   margin: 0 auto;
   padding: 30px 0px 0px 0px;
 }
-.sectioncouleurblanc{
+.flecheverteparcours {
+  width: 50px;
+}.sectioncouleurblanc{
   width: 70%;
   height: 100%;
   background-color: #ffffff;
@@ -468,6 +474,9 @@ main {
   color:#000000;
   text-align: center;
 }
+
+
+
 
 
 /* style page GESTION DE MON SITE */ 
