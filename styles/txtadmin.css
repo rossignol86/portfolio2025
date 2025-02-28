@@ -1,0 +1,130 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+}
+
+
+/* style liste contact */
+.blocgestion{
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 0 auto;
+}
+.boutonadmingestion {
+    font-family: "Kanit", sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100px;
+}          
+.boutonadmingestion-envoyer {
+    font-family: "Kanit", sans-serif;
+    display: inline-block;
+    width:400px;
+    height: 60px;
+    text-align: center;
+    font-size: 30px;
+    color: #000000;
+    text-decoration: none;
+    border: 1px solid #999;
+    border-radius: 5px;
+    background-color: rgb(244, 255, 205);
+    padding-top: 14px;
+    margin-top: 20px;
+}
+.boutonadmin {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 40px;
+    padding: 40px;
+}          
+.boutonadmin-envoyer {
+  display: inline-block;
+  width:60px;
+  height: 30px;
+  text-align: center;
+  line-height: 30px;
+  font-size: 15px;
+  color: rgb(255, 0, 0);
+  text-decoration: none;
+  border: 1px solid #999;
+  border-radius: 5px;
+  background-color: white;
+}
+
+
+
+.bloclistecontact{
+    /* width: 800px;
+    height: 100%; */
+    margin: 0 auto;
+  }
+.nomducontact {
+    font-family: "Kanit", sans-serif;
+    font-size:30px;
+    line-height: 34px;
+    font-weight: 500;
+    color:#000000;
+    text-align: center;
+    padding: 10px 0px 0px 0px;
+  }
+.societeducontact{
+    font-family: "Kanit", sans-serif;
+    font-size:26px;
+    line-height: 30px;
+    font-weight: 400;
+    color:#000000;
+    text-align: center;
+    padding: 10px 0px 20px 0px;
+  }
+.telducontact{
+    font-family: "Kanit", sans-serif;
+    font-size:22px;
+    line-height: 30px;
+    font-weight:300;
+    color:#000000;
+    text-align: center;
+    padding: 0px 0px 0px 0px;
+  }
+.messageducontact {
+    font-family: "Kanit", sans-serif;
+    font-size:22px;
+    line-height: 30px;
+    font-weight: 600;
+    color:#1a4215;
+    text-align: center;
+    padding: 20px 0px 10px 0px;
+  }
+
+
+
+
+.container-bouton-supprimer {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 20px 0;  /* Espace au-dessus et en dessous */
+} 
+.bouton-supprimer-contact {
+    font-family: "Kanit", sans-serif;
+    font-size: 20px;
+    display: inline-block;
+    padding: 8px 15px;
+    background-color: #e74c3c;
+    color: #fff;
+    text-decoration: none;
+    border-radius: 5px;
+    font-weight: bold;
+    transition: background-color 0.3s ease;
+}
+.bouton-supprimer-contact:hover {
+    background-color: #c0392b;
+}
+.bouton-supprimer-contact:active {
+    background-color: #a93226;
+    transform: scale(0.98);
+}

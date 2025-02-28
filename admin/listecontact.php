@@ -13,66 +13,92 @@ if (!$connexion) {
     die("Échec de la connexion : " . mysqli_connect_error());
 }
 
-// Requête pour récupérer les données de la table "creations"
+// 1. Suppression du contact
+if (isset($_GET['id_supprimer']) && is_numeric($_GET['id_supprimer'])) {
+    $id_supprimer = (int) $_GET['id_supprimer'];
+    
+    // Requête de suppression sécurisée
+    $sql_supprimer = "DELETE FROM contacts WHERE id = ?";
+    $stmt = mysqli_prepare($connexion, $sql_supprimer);
+    mysqli_stmt_bind_param($stmt, 'i', $id_supprimer);
+    mysqli_stmt_execute($stmt);
+    
+    // Vérifie si la suppression a réussi
+    if (mysqli_stmt_affected_rows($stmt) > 0) {
+        echo "<script>alert('Contact supprimé avec succès.');</script>";
+    } else {
+        echo "<script>alert('Erreur lors de la suppression du contact.');</script>";
+    }
+    
+    // Redirection pour éviter la suppression multiple en cas de rafraîchissement
+    header('Location: listecontact.php');
+    exit;
+}
+
+// 2. Récupération des contacts
+$contacts = [];
 $sql = "SELECT * FROM contacts ORDER BY id DESC";
 $resultats = mysqli_query($connexion, $sql);
-// $contacts = $resultats->fetch_all(MYSQLI_ASSOC);
 
-$contacts = [];
-
-
-if ($resultats) {
-    foreach ($resultats as $resultat) {
-        $contacts[] = $resultat;
-    }
+if ($resultats && mysqli_num_rows($resultats) > 0) {
+    $contacts = mysqli_fetch_all($resultats, MYSQLI_ASSOC);
 } else {
     echo "Erreur de requête : " . mysqli_error($connexion) . "<br>";
 }
 
-// Fermer la connexion
+// 3. Fermeture de la connexion
 mysqli_close($connexion);
-
 ?>
 
 <!DOCTYPE html>
 <html lang="fr">
+
 <head>
     <meta charset="UTF-8">
-    <link rel="stylesheet" href="../styles/styles.css">
-    <link href="https://fonts.googleapis.com/css2?family=Kanit:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Righteous&display=swap" rel="stylesheet">  
+    <link href="https://fonts.googleapis.com/css2?family=Kanit:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900&family=Righteous&display=swap" rel="stylesheet">  
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Liste des contacts</title>
+    <title>Admin site</title>
+    <link rel="stylesheet" href="../styles/reset.css">
+    <link rel="stylesheet" href="../styles/txtadmin.css">
+    <link rel="icon" href="favicon.ico">
 </head>
+
 <body>
-    <div>
-        <form class="boutonensavoirplus" action="../admin.html" method="GET">
-            <input type="hidden" name="id" value="1">
-            <button type="submit">Admin</button>
-        </form>
+    <section class="blocgestion">
+        <div>
+            <div class="boutonadmingestion">
+                <a href="../admin.html" class="boutonadmingestion-envoyer">Index portfolio</a>
+            </div>
+        </div>
         <div>
             <hr>
         </div>
-    </div>
-
+    </section>
 
     <div class="bloclistecontact">
         <?php if (!empty($contacts)): ?>
             <?php foreach ($contacts as $contact): ?>
                 <div>
-                    <p class="nomducontact"><?= $contact['nom']; ?></p>
-                    <p class="societeducontact"><?= $contact['societe']; ?></p>
-                    <p class="telducontact"><?= $contact['telephone']; ?></p>
-                    <p class="telducontact"><?= $contact['email']; ?></p>
-                    <p class="messageducontact"><?= $contact['message']; ?></p>
                     <hr>
+                    <p class="nomducontact"><?= htmlspecialchars($contact['nom']); ?></p>
+                    <p class="societeducontact"><?= htmlspecialchars($contact['societe']); ?></p>
+                    <p class="telducontact"><?= htmlspecialchars($contact['telephone']); ?></p>
+                    <p class="telducontact"><?= htmlspecialchars($contact['email']); ?></p>
+                    <p class="messageducontact"><?= nl2br(htmlspecialchars($contact['message'])); ?></p>
+
+                    <div class="container-bouton-supprimer">
+                        <a href="listecontact.php?id_supprimer=<?= $contact['id']; ?>" 
+                        class="bouton-supprimer-contact"
+                        onclick="return confirm('Franck tu es sur de vouloir supprimer ce message ? Attention il va disparaître, vraiment disparître !');">
+                            Supprimer contact
+                        </a>
+                    </div>
+
                 </div>    
             <?php endforeach; ?>
         <?php else: ?>
             <p>Aucun contact trouvé.</p>
         <?php endif; ?>
     </div>
-
-
-    
 </body>
 </html>

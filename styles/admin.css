@@ -32,14 +32,14 @@ h1{
     flex-direction: column;
     align-items: center;
     margin: 0 auto;
-  }
-  .boutonadmingestion {
+}
+.boutonadmingestion {
     display: flex;
     justify-content: center;
     align-items: center;
     height: 100px;
-  }          
-  .boutonadmingestion-envoyer {
+}          
+.boutonadmingestion-envoyer {
     display: inline-block;
     width:400px;
     height: 60px;
@@ -52,4 +52,26 @@ h1{
     background-color: rgb(244, 255, 205);
     padding-top: 14px;
     margin-top: 40px;
-  }
+}
+
+.boutonadmin {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 40px;
+    padding: 40px;
+}          
+.boutonadmin-envoyer {
+  display: inline-block;
+  width:60px;
+  height: 30px;
+  text-align: center;
+  line-height: 30px;
+  font-size: 15px;
+  color: rgb(255, 0, 0);
+  text-decoration: none;
+  border: 1px solid #999;
+  border-radius: 5px;
+  background-color: white;
+}
+

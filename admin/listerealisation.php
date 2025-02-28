@@ -25,7 +25,7 @@ $sql = "SELECT * FROM creations ORDER BY id DESC";
 $resultats = mysqli_query($connexion, $sql);
 // $contacts = $resultats->fetch_all(MYSQLI_ASSOC);
 
-$contacts = [];
+// $contacts = [];
 
 
 if ($resultats) {
