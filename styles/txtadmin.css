@@ -12,6 +12,7 @@
     flex-direction: column;
     align-items: center;
     margin: 0 auto;
+    padding-bottom: 40px;
 }
 .boutonadmingestion {
     font-family: "Kanit", sans-serif;
@@ -33,7 +34,7 @@
     border-radius: 5px;
     background-color: rgb(244, 255, 205);
     padding-top: 14px;
-    margin-top: 20px;
+    margin-top: 40px;
 }
 .boutonadmin {
     display: flex;

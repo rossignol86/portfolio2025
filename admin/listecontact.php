@@ -79,7 +79,7 @@ mysqli_close($connexion);
         <?php if (!empty($contacts)): ?>
             <?php foreach ($contacts as $contact): ?>
                 <div>
-                    <hr>
+                    
                     <p class="nomducontact"><?= htmlspecialchars($contact['nom']); ?></p>
                     <p class="societeducontact"><?= htmlspecialchars($contact['societe']); ?></p>
                     <p class="telducontact"><?= htmlspecialchars($contact['telephone']); ?></p>
@@ -89,11 +89,11 @@ mysqli_close($connexion);
                     <div class="container-bouton-supprimer">
                         <a href="listecontact.php?id_supprimer=<?= $contact['id']; ?>" 
                         class="bouton-supprimer-contact"
-                        onclick="return confirm('Franck tu es sur de vouloir supprimer ce message ? Attention il va disparaître, vraiment disparître !');">
+                        onclick="return confirm('Franck, tu es sur de vouloir supprimer ce message ? Attention il va disparaître, vraiment disparaître, vraiment vraiment dispaître !');">
                             Supprimer contact
                         </a>
                     </div>
-
+                    <hr>
                 </div>    
             <?php endforeach; ?>
         <?php else: ?>

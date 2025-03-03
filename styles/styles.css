@@ -82,6 +82,15 @@ aside {
 
 
 
+
+
+
+
+main {
+  flex: 1;
+  background: #ffffff;
+}
+
 /* Section NAVBAR */
 nav {
   width: 100%;
@@ -120,16 +129,6 @@ nav {
   font-size: 24px;
 }s
 
-
-
-
-
-
-
-main {
-  flex: 1;
-  background: #ffffff;
-}
 
 
 

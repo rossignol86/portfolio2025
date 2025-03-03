@@ -1,42 +1,43 @@
 <?php
- 
+
 // Paramètres de connexion
 $serveur = "localhost";
 $utilisateur = "root";
 $mot_de_passe = "";
 $base_de_donnees = "portfolio";
- 
+
 // Établir la connexion
- $connexion = mysqli_connect($serveur, $utilisateur,
-$mot_de_passe, $base_de_donnees);
- 
+$connexion = mysqli_connect($serveur, $utilisateur, $mot_de_passe, $base_de_donnees);
+
 // Vérifier la connexion
-// if (!$connexion) {
-//     die("Échec de la connexion : " . mysqli_connect_error());
-// } else {
-//     echo "Connexion réussie à la base de données.";
-// }
- 
- 
+if (!$connexion) {
+    die("Échec de la connexion : " . mysqli_connect_error());
+}
+
+$message_envoye = false;
+
 // Vérification si le formulaire est soumis
 if ($_SERVER["REQUEST_METHOD"] == "POST") {
- 
-// Récupération des données du formulaire
-    $nom = $_POST['nom'];
-    $societe = $_POST['societe'];
-    $email = $_POST['email'];
-    $telephone = $_POST['telephone'];
-    $message = $_POST['message'];
-   
-// Requête d'insertion des données
+
+    // Sécurisation des données
+    $nom = mysqli_real_escape_string($connexion, $_POST['nom']);
+    $societe = mysqli_real_escape_string($connexion, $_POST['societe']);
+    $email = mysqli_real_escape_string($connexion, $_POST['email']);
+    $telephone = mysqli_real_escape_string($connexion, $_POST['telephone']);
+    $message = mysqli_real_escape_string($connexion, $_POST['message']);
+
+    // Requête d'insertion des données
     $sql = "INSERT INTO contacts (nom, societe, email, telephone, message)
-    VALUES ('$nom', '$societe', '$email', '$telephone', '$message')";
- 
-// Exécution de la requête d'insertion
-    mysqli_query($connexion,$sql);
+            VALUES ('$nom', '$societe', '$email', '$telephone', '$message')";
+
+    // Exécution de la requête
+    if (mysqli_query($connexion, $sql)) {
+        $message_envoye = true;
+    }
 }
- 
+
 // Fermer la connexion
+mysqli_close($connexion);
 ?>
 
 
@@ -56,10 +57,9 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     <link rel="stylesheet" href="styles/contact.css">
 
     <link rel="icon" href="favicon.ico">
-      
-  </head>
-    
-  <body>
+          
+</head>
+<body>
       
     <div class="container">
   
@@ -148,7 +148,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
                         </div>
 
                         <section>
-                            <!-- Formulaire de renseignement -->
+                            <!-- Formulaire de contact -->
                             <form action="contact.php" method="post">
                                 <label for="nom">Nom :</label>
                                 <input class="formulaire" type="text" id="nom" name="nom" required><br><br>
@@ -163,14 +163,19 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
                                 <input class="formulaire" type="email" id="email" name="email" required><br><br>
                                 
                                 <label for="message">Message :</label>
-                                <textarea  class="formulaire" id="message" name="message" required></textarea><br><br>
-                                
-                                <input class="boutton1" type="submit" value="Envoyer">
+                                <textarea class="formulaire" id="message" name="message" required></textarea><br><br>
+
+                                <button class="boutton1" type="submit">Envoyer</button>
+
+                                <!-- <input class="boutton1" type="submit" value="Envoyer"> -->
                             </form>
                         </section>
                     </div>
 
-            </container>           
+            </container>   
+
+
+
               
 <!-- section footer fond vert -->
             <section class="sectionfooterfondvert">
@@ -198,4 +203,5 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         
     </div>
   </body>
+
 </html>
