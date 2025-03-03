@@ -10,11 +10,11 @@ $base_de_donnees = "portfolio";
 $connexion = mysqli_connect($serveur, $utilisateur, $mot_de_passe, $base_de_donnees);
 
 // Vérifier la connexion
-if (!$connexion) {
-    die("Échec de la connexion : " . mysqli_connect_error());
-}
+// if (!$connexion) {
+//     die("Échec de la connexion : " . mysqli_connect_error());
+// }
 
-$message_envoye = false;
+// $message_envoye = false;
 
 // Vérification si le formulaire est soumis
 if ($_SERVER["REQUEST_METHOD"] == "POST") {
@@ -43,29 +43,22 @@ mysqli_close($connexion);
 
 <!DOCTYPE html>
 <html lang="fr">
-  <head>
+<head>
     <meta charset="UTF-8" />
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Kanit:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Righteous&display=swap" rel="stylesheet">  
-    
+    <link href="https://fonts.googleapis.com/css2?family=Kanit:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Righteous&display=swap" rel="stylesheet">
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Portfolio Franck Rossignol 2025</title>
-    
     <link rel="stylesheet" href="styles/reset.css">
     <link rel="stylesheet" href="styles/styles.css">
     <link rel="stylesheet" href="styles/contact.css">
 
     <link rel="icon" href="favicon.ico">
-          
 </head>
 <body>
-      
     <div class="container">
-  
-        
-<!-- partie gauche noir et fixe -->     
-      <aside>
+        <aside>
             <div>
                 <img class="imagefixe" src="images/franck.png" alt="Image description">
             </div>
@@ -101,84 +94,58 @@ mysqli_close($connexion);
                         </a>
                     </p>
                 </div>
-      </aside>
-        
-        
-        
-<!-- partie droite mobile sauf la navbar -->        
-      <main>
-          
-<!-- barre de navigation -->           
-        <nav class="navbar">                    
+        </aside>
+        <main>
+            <nav class="navbar">
                 <ul>
                     <li><a href="index.html">Accueil</a></li>
                     <li><a href="creations.html">Créations</a></li>
                     <li><a href="parcours.html">Parcours</a></li>
                     <li><a href="contact.php">Contact</a></li>
                 </ul>
-        </nav>
-          
-                  
-<!-- partie centrale-->        
-        <div>
-
-<!-- TITRE PAGE MES CREATIONS -->           
-            <container class="bloccreations">
-                <div>
-                    <h1 class="titrecreations">
-                        <img class="flechevertecreations" src="images/flecheverte1.png" alt="fleche verte">
-                        Contactez-moi !
-                    </h1>
-                </div>
-      
-            </container>
-            <container class="bloccreations2">
-                <div class="containercreations">
-                    <div class="card">  
-                        <div class="containerimage">
-                            <img class="image" src="images/email.jpg" alt="Publicité facebook" >
-                        </div>
-                        <!-- <div>
-                            <p class="travaux">Vous pouvez me laisser un message</p>
-                        </div> -->
-                        <div>
-                            <p class="description">N'hésitez pas à me contacter pour toute question ou demande. Je suis à votre disposition pour vous aider
-                            et répondre à vos besoins. Je serai ravis de discuter de votre projet et de voir comment nous pouvons collaborer.
-                            Contactezmoi dès aujourd'hui et faisons avancer vos idées ensemble !</p>
-                        </div>
-
-                        <section>
-                            <!-- Formulaire de contact -->
-                            <form action="contact.php" method="post">
-                                <label for="nom">Nom :</label>
-                                <input class="formulaire" type="text" id="nom" name="nom" required><br><br>
-                                
-                                <label for="societe">Société :</label>
-                                <input class="formulaire" type="text" id="societe" name="societe"><br><br>
-                                
-                                <label for="telephone">Téléphone :</label>
-                                <input class="formulaire" type="tel" id="telephone" name="telephone"><br><br>
-                                
-                                <label for="email">Email :</label>
-                                <input class="formulaire" type="email" id="email" name="email" required><br><br>
-                                
-                                <label for="message">Message :</label>
-                                <textarea class="formulaire" id="message" name="message" required></textarea><br><br>
-
-                                <button class="boutton1" type="submit">Envoyer</button>
-
-                                <!-- <input class="boutton1" type="submit" value="Envoyer"> -->
-                            </form>
-                        </section>
+            </nav>
+            <div>
+                <container class="bloccreations">
+                    <div>
+                        <h1 class="titrecreations">
+                            <img class="flechevertecreations" src="images/flecheverte1.png" alt="fleche verte">
+                            Contactez-moi !
+                        </h1>
                     </div>
-
-            </container>   
-
-
-
-              
-<!-- section footer fond vert -->
-            <section class="sectionfooterfondvert">
+                </container>
+                <container class="bloccreations2">
+                    <div class="containercreations">
+                        <div class="card">
+                            <div class="containerimage">
+                                <img class="image" src="images/email.jpg" alt="Publicité facebook">
+                            </div>
+                            <div>
+                                <p class="description">N'hésitez pas à me contacter pour toute question ou demande. Je suis à votre disposition pour vous aider
+                                et répondre à vos besoins. Je serai ravis de discuter de votre projet et de voir comment nous pouvons collaborer.
+                                Contactez-moi dès aujourd'hui et faisons avancer vos idées ensemble !</p>
+                            </div>
+                            <section>
+                                <form action="contact.php" method="post">
+                                    <label for="nom">Nom :</label>
+                                    <input class="formulaire" type="text" id="nom" name="nom" required><br><br>
+                                    <label for="societe">Société :</label>
+                                    <input class="formulaire" type="text" id="societe" name="societe"><br><br>
+                                    <label for="telephone">Téléphone :</label>
+                                    <input class="formulaire" type="tel" id="telephone" name="telephone"><br><br>
+                                    <label for="email">Email :</label>
+                                    <input class="formulaire" type="email" id="email" name="email" required><br><br>
+                                    <label for="message">Message :</label>
+                                    <textarea class="formulaire" id="message" name="message" required></textarea><br><br>
+                                    <span>
+                                    <input class="boutton1" onclick="return confirm('Le message a été envoyé, je prendrai contact avec vous dans les prochains jours')"
+                                    type="submit" value="Envoyer">
+                                    </span>
+                                </form>
+                            </section>
+                        </div>
+                    </div>
+                </container>
+                <section class="sectionfooterfondvert">
                     <footer class="stylefooter">
                         <div class="navbarfooter">
                             <ul>
@@ -188,20 +155,13 @@ mysqli_close($connexion);
                                 <li><a href="contact.php">Contact</a></li>
                             </ul>
                         </div>
-                        
                         <div class="coordonnees">
                             <p class="mentions">ff.rossignol@yahoo.fr - 86190 VOUILLE - ©rossignol - 2024 -&nbsp;Webdesign&nbsp;sur&nbsp;FIGMA - HTML & CSS sur Visual Studio Code</p>
                         </div>
                     </footer>
-
-            </section>
-
-<!-- fin de la partie centrale-->             
-        </div>
-                 
-      </main>
-        
+                </section>
+            </div>
+        </main>
     </div>
-  </body>
-
+</body>
 </html>

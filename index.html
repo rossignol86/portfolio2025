@@ -55,12 +55,22 @@
                             Linkedin
                         </a>
                     </p>
+
+
                     <div>
-                        <form class="boutonensavoirplus" action="admin.html" method="GET">
-                            <input type="hidden" name="id" value="1">
-                            <button type="submit">Admin</button>
-                        </form>
+                        <button id="adminBtn">Admin</button>
                     </div>
+                
+                    <!-- Boîte de dialogue pour entrer le mot de passe -->
+                    <div id="passwordModal">
+                        <div id="modalContent">
+                            <p>Veuillez entrer le mot de passe :</p>
+                            <input type="password" id="passwordInput" placeholder="Mot de passe">
+                            <button id="submitPassword">Valider</button>
+                            <button id="closeModal">Annuler</button>
+                        </div>
+                    </div>
+
                 </div>
             </div>
       </aside>
@@ -200,5 +210,31 @@
       </main>
         
     </div>
+
+    <script>
+        document.getElementById("adminBtn").addEventListener("click", function(event) {
+            event.preventDefault(); // Empêche toute redirection immédiate
+            document.getElementById("passwordModal").style.display = "flex"; // Affiche la boîte de dialogue
+        });
+
+        // Gestion de la validation du mot de passe
+        document.getElementById("submitPassword").addEventListener("click", function() {
+            var password = document.getElementById("passwordInput").value;
+            var correctPassword = "@fr150566"; // mot de passe
+
+            if (password === correctPassword) {
+                window.location.href = "admin.html"; // Redirige vers la page admin
+            } else {
+                alert("Mot de passe incorrect.");
+                document.getElementById("passwordInput").value = ""; // Vide le champ de saisie
+            }
+        });
+
+        // Bouton pour fermer la boîte de dialogue sans rien faire
+        document.getElementById("closeModal").addEventListener("click", function() {
+            document.getElementById("passwordModal").style.display = "none"; // Cache la boîte
+            document.getElementById("passwordInput").value = ""; // Vide le champ
+        });
+    </script>
   </body>
 </html>
