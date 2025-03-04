@@ -1,18 +1,21 @@
 <?php
 // Paramètres de connexion
-$serveur = "localhost";
-$utilisateur = "root";
-$mot_de_passe = "";
-$base_de_donnees = "portfolio";
+// $serveur = "localhost";
+// $utilisateur = "root";
+// $mot_de_passe = "";
+// $base_de_donnees = "portfolio";
 
 // Créer la connexion
-$connexion = mysqli_connect($serveur, $utilisateur,
-$mot_de_passe, $base_de_donnees);
+// $connexion = mysqli_connect($serveur, $utilisateur,
+// $mot_de_passe, $base_de_donnees);
 
 // Vérifier la connexion
-if ($connexion->connect_error) {
-    die("Connexion échouée: " . $connexion->connect_error);
-}
+// if ($connexion->connect_error) {
+//     die("Connexion échouée: " . $connexion->connect_error);
+// }
+
+include('connexion.php');
+
 
 // Requete pour Récupérer l'ID à partir des paramètres de l'URL
 $id = $_GET['id'];
@@ -101,12 +104,6 @@ mysqli_close($connexion);
                             Linkedin
                         </a>
                     </p>
-                    <div>
-                        <form class="boutonensavoirplus" action="../admin.html" method="GET">
-                            <input type="hidden" name="id" value="1">
-                            <button type="submit">Admin</button>
-                        </form>
-                    </div>
                 </div>
             </div>
         </aside>     

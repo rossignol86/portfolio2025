@@ -110,8 +110,13 @@ aside {
   background: white;
   padding: 20px;
   border-radius: 10px;
-  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.3);
+  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.4);
   text-align: center;
+}
+
+.txtModalContent{
+  font-size: 18px;
+  font-weight: 400;
 }
 
 /* Champ de mot de passe */
@@ -125,7 +130,7 @@ aside {
 
 /* Boutons */
 #submitPassword, #closeModal {
-  font-size: 16px;
+  font-size: 18px;
   padding: 10px 15px;
   margin: 5px;
   border: none;
@@ -150,10 +155,6 @@ aside {
 #closeModal:hover {
   background-color: #6d040e;
 }
-
-
-
-
 
 
 

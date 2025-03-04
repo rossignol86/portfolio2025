@@ -1,23 +1,24 @@
 <?php
 // Paramètres de connexion
-$serveur = "localhost";
-$utilisateur = "root";
-$mot_de_passe = "";
-$base_de_donnees = "portfolio";
+// $serveur = "localhost";
+// $utilisateur = "root";
+// $mot_de_passe = "";
+// $base_de_donnees = "portfolio";
 
 // Établir la connexion
-$connexion = mysqli_connect($serveur, $utilisateur, $mot_de_passe, $base_de_donnees);
+// $connexion = mysqli_connect($serveur, $utilisateur, $mot_de_passe, $base_de_donnees);
 
 // Vérifier la connexion
-if (!$connexion) {
-    die("Échec de la connexion : " . mysqli_connect_error());
-}
+// if (!$connexion) {
+//     die("Échec de la connexion : " . mysqli_connect_error());
+// }
 
 // if ($_GET["id_supprimer"]) {
 //     $sql = "DELETE from creations where id=" . $_GET["id_supprimer"];
 //     $resultats=mysqli_query($connexion, $sql);
 // }
 
+include('connexion.php');
 
 
 // Requête pour récupérer les données de la table "creations"

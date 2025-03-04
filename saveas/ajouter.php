@@ -1,22 +1,23 @@
 <?php
  
 // Paramètres de connexion
-$serveur = "localhost";
-$utilisateur = "root";
-$mot_de_passe = "";
-$base_de_donnees = "portfolio";
+// $serveur = "localhost";
+// $utilisateur = "root";
+// $mot_de_passe = "";
+// $base_de_donnees = "portfolio";
  
 // Établir la connexion
- $connexion = mysqli_connect($serveur, $utilisateur,
-$mot_de_passe, $base_de_donnees);
+//  $connexion = mysqli_connect($serveur, $utilisateur,
+// $mot_de_passe, $base_de_donnees);
  
 // Vérifier la connexion
-if (!$connexion) {
-    die("Échec de la connexion : " . mysqli_connect_error());
-} else {
-    echo "Connexion réussie à la base de données.";
-}
+// if (!$connexion) {
+//     die("Échec de la connexion : " . mysqli_connect_error());
+// } else {
+//     echo "Connexion réussie à la base de données.";
+// }
  
+include('connexion.php');
  
 // Vérification si le formulaire est soumis
 if ($_SERVER["REQUEST_METHOD"] == "POST") {

@@ -56,7 +56,7 @@
                         </a>
                     </p>
 
-<!--Bouton admin  -->
+                    <!--Bouton admin  -->
                     <div>
                         <button id="adminBtn">Admin</button>
                     </div>
@@ -64,7 +64,7 @@
                     <!-- Boîte de dialogue pour entrer le mot de passe -->
                     <div id="passwordModal">
                         <div id="modalContent">
-                            <p>Veuillez entrer le mot de passe :</p>
+                            <p class="txtModalContent">Veuillez entrer le mot de passe :</p>
                             <input type="password" id="passwordInput" placeholder="Mot de passe">
                             <button id="submitPassword">Valider</button>
                             <button id="closeModal">Annuler</button>
@@ -118,7 +118,7 @@
                     </div>
                 </div>
 
-    <!-- section contenu avec couleur gris en fond de la DIV -->
+<!-- section contenu avec couleur gris en fond de la DIV -->
                     <section class="sectioncontenufondvert">
                         <div class="infosfondvert">
                         <h1 class="bloctitregraphiste">
@@ -219,8 +219,8 @@
 
         // Gestion de la validation du mot de passe
         document.getElementById("submitPassword").addEventListener("click", function() {
-            var password = document.getElementById("passwordInput").value;
-            var correctPassword = "@fr150566"; // mot de passe
+            let password = document.getElementById("passwordInput").value;
+            let correctPassword = "@fr150566"; // mot de passe
 
             if (password === correctPassword) {
                 window.location.href = "admin.html"; // Redirige vers la page admin
@@ -231,10 +231,10 @@
         });
 
         // Bouton pour fermer la boîte de dialogue sans rien faire
-        document.getElementById("closeModal").addEventListener("click", function() {
-            document.getElementById("passwordModal").style.display = "none"; // Cache la boîte
-            document.getElementById("passwordInput").value = ""; // Vide le champ
-        });
+            document.getElementById("closeModal").addEventListener("click", function() {
+                document.getElementById("passwordModal").style.display = "none"; // Cache la boîte
+                document.getElementById("passwordInput").value = ""; // Vide le champ
+            });
     </script>
   </body>
 </html>
