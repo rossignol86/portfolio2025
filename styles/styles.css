@@ -520,12 +520,16 @@ main {
   text-shadow: 2px 2px 5px rgba(205, 220, 41, 2);
   padding: 30px 0px 40px 0px;
 }
-.entreprise {
+.entreprise, .stageentreprise  {
   font-size:24px;
   line-height: 24px;
   font-weight: 600;
   color:#000000;
   text-align: center;
+}
+.stageentreprise{
+  padding: 20px;
+  color:#ff7b00;
 }
 .annee {
   font-size:20px;
@@ -540,6 +544,7 @@ main {
   font-weight: 200;
   color:#000000;
   text-align: center;
+  margin: 0px 0px 20px 0px;
 }
 .postes {
   font-size:18px;
@@ -547,10 +552,10 @@ main {
   font-weight: bold;
   color:#000000;
   text-align: center;
-  padding: 10px 0px 0px 0px;
+  padding: 40px 0px 0px 0px;
 }
 .mission {
-  font-size:18px;
+  font-size:20px;
   line-height: 24px;
   font-weight: 200;
   color:#000000;
